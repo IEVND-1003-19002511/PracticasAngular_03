@@ -1,0 +1,67 @@
+<body>
+    
+    <h1>
+        Suma Repetida
+    </h1>
+
+    <div class="row">
+        
+        <div class="col-6">
+            
+            <div class="mb-3 row">
+                <label for="primerNumero">
+                    Ingrese el primer número:
+                </label> 
+
+                <div class="col-sm-10">
+                    <input type="number" id="primerNumero" [(ngModel)]="primerNumero">
+                </div>
+            </div>
+        
+            <div class="mb-3 row">
+                <label for="segundoNumero">
+                    Ingrese el segundo número:
+                </label>
+                
+                <div class="col-sm-10">
+                    <input type="number" id="segundoNumero" [(ngModel)]="segundoNumero">
+                </div>
+            </div>
+            
+            <div class="mb-3 row">            
+                <table>
+                    <td></td>
+                    <td><button (click)="calcularSuma()">
+                        Calcular
+                    </button></td>
+                    <td></td>
+                </table>
+            </div>
+        
+        </div>
+            
+        <div class="col-6">
+                
+            <div *ngIf="resultados.length > 0">
+                <h2>
+                    Resultados:
+                </h2>
+                
+                <ul>
+                    <h3>
+                        <span *ngFor="let resultado of resultados; let i = index">
+                            {{ primerNumero }}
+                        </span>
+                    </h3>
+                </ul>
+                
+                <h2>
+                    Suma total: {{ sumaTotal }}
+                </h2>
+            </div>
+        
+        </div>
+
+    </div>
+
+</body>
