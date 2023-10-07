@@ -1,0 +1,145 @@
+#entradas{
+  border: 2px solid white;
+  width: 48%;
+  float: left;
+  margin-left: 35px;
+  height: auto;
+}
+
+.example-form{
+  min-width: 100px;
+  max-width: 200px;
+  width: 100%;
+  max-height: 100px;
+  min-height: 50px;
+  height: 100%;
+}
+
+.example-full.width{
+  width: 100;;
+}
+
+#total{
+  border:2px solid white;
+  width: 40%;
+  height: 150px;
+  margin-left: 100px;
+  margin-top: 30px;
+}
+
+#botones{
+  border:2px solid white;
+  width: 25%;
+  margin-left: 40%;
+  height: 100px;
+  margin-top: 140px;
+}
+#impresion{
+  border:2px solid white;
+  margin-top: -450px;
+  margin-bottom: 10px;
+  background-color: rgba(7, 7, 7, 0.808);
+  color:white;
+  width:35%;
+  margin-left: 63%;
+  height: 85%;
+  font-weight: bolder;
+  
+}
+#imprIn{
+  width:20%;
+  background-color: black;
+  margin-left: 190px;
+  margin-top: -20px;
+}
+
+
+.button1{
+  background-color:gray;
+  color: black;
+  width:120px;
+  height:50px;
+  border-color: black;
+  margin-left: 10%;
+}
+
+.button2{
+  background-color: gray;
+  color: black;
+  width:120px;
+  height:50px;
+  border-color: black;
+  margin-left: 55%;
+  margin-top: -19%;
+}
+h1{
+  background-color: #36e6d7;
+  width: 150px;
+  text-align: center;
+  border-radius: 5px;
+  margin-top: -20px;
+  color: white;
+  font-family:Georgia, 'Times New Roman', Times, serif;
+  font-style: italic;
+  
+}
+#cinepolis{
+  margin: auto;
+  width: 50%;
+  text-align: center;
+}
+#cine{
+  float: right;
+  width: 310px;
+  height: 124px;
+  margin-top: 50px;
+  margin-left: -200%;
+}
+#mensaje{
+  color: red;
+  margin-bottom: 10px;
+  text-align: center;
+  width: 400px;
+  
+}
+
+#imgfond{
+
+  background-image: url("https://images.unsplash.com/photo-1561722798-9a732d141027?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+body{
+  background-color: #2ddfe6;
+  width: 122.7%;
+  height: 689.4px;
+  margin-left:-11.5%;
+}
+
+
+
+#ali2 label{
+  height: 0px;
+  width: 132px;
+  margin-top: 0%;
+  margin-left: 8%;
+  color: white;
+  font-weight: bold;
+  
+}
+
+#alitex{
+  text-align: center;
+  color: rgb(26, 22, 231);
+  font-weight: bolder;
+}
+
+#cinepolis{
+  background-image: url('https://www.exhibidorlatino.com/fotos/noticias/mercado/not_2222_1567196626.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 100px; /* Agrega relleno para que el contenido del encabezado sea visible */
+  text-align: center; /* Alinea el contenido al centro */
+}

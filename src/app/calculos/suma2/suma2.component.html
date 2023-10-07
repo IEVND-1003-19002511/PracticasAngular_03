@@ -1,44 +1,122 @@
 <body>
-    <h1>
-        Entradas
-    </h1>
-    <div class="row">
-        <div class="mb-3">
-            <label for="name">
-                Nombre
-            </label>
-            <div class="col-sm-10">
-                <input type="checkbox" id="name">
-            </div>
+  <div id="imgfond">
+    <div class="container-fluid con-1" >
+      <div id="cinepolis"></div>
+      <br>
+      <br>  
+      <div class="row" >
+        <div id="entradas">
+          <h1>Boletos</h1> 
+          <div class="col-6">
+            <form class="example-form">
+              <mat-form-field class="example-full-width">
+                <mat-label for="nom" class="col-sm-2 col-form-label" id="alitex" style="width: 180px; text-align: center;">Nombre</mat-label>
+                <input matInput type="text" [(ngModel)]="nom" name="nom" class="form-control" value="nom" required [ngStyle]="{'color':'black'}">
+              </mat-form-field>          
+            </form>
+            <br>
+            <form class="example-form">
+              <mat-form-field class="example-full-width">
+                <mat-label for="cant" class="col-sm-2 col-form-label" id="alitex"  style="width: 180px; text-align: center;">Cantidad Compradores</mat-label>
+                <input matInput type="number" [(ngModel)]="cant" name="cant" class="form-control" value="cant" required [ngStyle]="{'color':'black'}">
+              </mat-form-field>
+            </form>
+            <br>
+            <form class="example-form">
+              <mat-radio-group name="opciones" [(ngModel)]="tarjSeleccionada">
+                <label for="opciones" class="col-sm-2 col-form-label" id="alitex" style="width: 180px; text-align: center;">Tine Cineco</label>
+                <mat-radio-button *ngFor="let op of tarj" name="opciones" [value]="op" style="margin: 10px"> {{op}} </mat-radio-button>
+              </mat-radio-group>
+            </form>
+            <br>
+            <form class="example-form">
+              <mat-form-field class="example-full-width">
+                <label for="bol" class="col-sm-2 col-form-label" id="alitex" style="width: 180px; text-align: center;">Cantidad de Boletas</label>
+                <input matInput type="number" [(ngModel)]="bol" name="bol" class="form-control" value="bol" required [ngStyle]="{'color':'black'}">
+              </mat-form-field>
+            </form>
+          </div>
         </div>
         <br>
-        <div class="mb-3">
-            <label for="cantidadCompradores">
-                Cantidad de compradores
-            </label>
-            <div class="col-sm-10">
-                <input type="number" id="contidadCompradores" >
-            </div>
-        </div>
         <br>
-        <div class="mb-3">
-            <label for="tarjetasCine">
-                Tarjetas Cinepolis
-            </label>
-            <div class="col-sm-10">
-                <input type="radio" id="tarjetasCine">
-                <br>
-                <input type="radio" id="tarjetasCine">
-            </div>
+        <br>
+        <br>
+        <br>           
+        <div id="total">
+          <h1>Salidas</h1>
+          <div class="mb-3 row" id="ali2"> 
+            <mat-form-field>
+              <mat-label for="bol" class="col-sm-2 col-form-label" id="alitex">Valor a pagar</mat-label>             
+              <input matInput type="text" value="${{total}}" readonly>
+            </mat-form-field>
+          </div>
         </div>
-        <div class="mb-3">
-            <label for="cantidadBoletos">
-                Cantidad de Boletos 
-            </label>
-            <div class="col-sm-10">
-                <input type="checkbox">
-            </div>
+        <div id="botones">
+          <h1>Acciones</h1>      
+          <div class="mb-3 row">
+            <button mat-raised-button (click)="Procesar()" class="button1"> Procesar</button>
+          </div>        
+          <div class="mb-3 row">
+            <button mat-raised-button (click)="cancelar()" class="button2"> Cancelar</button>
+          </div>
         </div>
-
+        <br><br>
+        <div id="impresion" *ngIf="imp">
+          <br>
+          <table>
+            <tr>
+              <td>
+                <div id="ali">
+                  <mat-form-field>
+                    <mat-label for="nom" calss="col-sm-2 col-form-label" id="alitex">Nombre:</mat-label>
+                    <input matInput type="text" value="{{nom}}" readonly>
+                  </mat-form-field>
+                </div>
+              </td>
+              <td>
+                <div id="ali">
+                  <mat-form-field >
+                    <mat-label for="cant" class="col-sm-2 col-form-label" id="alitex">Compradores:</mat-label> 
+                    <input matInput type="text" value="{{cant}}" readonly [ngStyle]="{'color':'black'}">
+                </mat-form-field>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <div id="ali">
+                  <mat-form-field>
+                    <mat-label for="bol" class="col-sm-2 col-form-label" id="alitex">Boletos:</mat-label>
+                    <input matInput type="text" value="{{bol}}" readonly [ngStyle]="{'color':'black'}">
+                  </mat-form-field>
+                </div>
+              </td>
+              <td>
+                <div id=""ali>
+                    <mat-form-field>
+                      <mat-label for="opciones" class="col-sm-2 col-form-label " id="alitex">Tarjeta Cineco:</mat-label>
+                      <input matInput type="text" value="{{tarjSeleccionada}}" readonly [ngStyle]="{'color':'black'}">
+                    </mat-form-field>
+                </div>
+              </td>
+            </tr>
+            <tr>
+            <td>
+              <div id="ali">
+                <mat-form-field>
+                  <mat-label for="total" class="col-sm-2 col-form-label" id="alitex">Valor a pagar es</mat-label>
+                  <input matInput type="text" value="${{total}}" readonly [ngStyle]="{'color':'black'}">
+                </mat-form-field>
+              </div>
+            </td>
+            <td>
+              <img src="https://invoice-storage.cinepolis.com/static/media/c-logo.2fcb4d95.svg" id="cine">
+            </td>
+            </tr>
+          </table>
+          <br>               
+        </div>                
+      </div>
     </div>
+  </div>
 </body>
